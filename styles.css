@@ -25,9 +25,14 @@ header h1 {
     padding-top: 10px;
 }
 
+h1 span {
+    color: #e36861;
+}
+
 .pre-wrapper {
     display: flex;
     justify-content: space-between;
+    padding: 20px 40px;
 }
 
 header a {
@@ -52,4 +57,9 @@ header ul li:first-child {
 
 header li {
     margin-left: 30px;
+}
+
+.line {
+    height: 6px;
+    background-color: #323746;
 }
