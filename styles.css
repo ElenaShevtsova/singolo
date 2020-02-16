@@ -63,3 +63,12 @@ header li {
     height: 6px;
     background-color: #323746;
 }
+
+.slider-block {
+    background-color: #f06c64;
+}
+
+.pre-wrapper_slider-block {
+    display: flex;
+    justify-content: space-between;
+}
