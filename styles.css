@@ -72,3 +72,30 @@ header li {
     display: flex;
     justify-content: space-between;
 }
+
+.slider-block_images {
+    display: flex;
+}
+
+.first-img_second-layer {
+    width: 190px;
+    height: 337px;
+    background-image: url('assets/Layer\ 6.png');
+    position: absolute;
+    top: 60px;
+    left: 15px;
+}
+
+.second-img_second-layer {
+    width: 337px;
+    height: 190px;
+    background-image: url('assets/Layer\ 5.png');
+    position: absolute;
+    top: 15px;
+    left: 60px;
+}
+
+.first-img,
+.second-img {
+    position: relative;
+}
