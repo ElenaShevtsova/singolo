@@ -145,6 +145,12 @@ header li {
     left: 17px;
 }
 
+.left-button:hover,
+.right-button:hover {
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
 .right-button img {
     position: absolute;
     top: 279px;
@@ -431,4 +437,8 @@ header li {
     padding-top: 9px;
     margin: 0;
     letter-spacing: -0.02rem;
+}
+.line-afterservices {
+    height: 6px;
+    background-color: #fff;
 }
