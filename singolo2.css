@@ -107,7 +107,44 @@ body {
 }
 
 .line-after-portfolio{
-    
+    height: 6px;
+    background-color: #323746;
 }
 
-.
+.about-us h2{
+    color: #666d89;
+}
+
+.paragraph-after-heading {
+    color: #767e9e;
+}
+
+.about-us-information {
+    display: flex;
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+.information-block {
+    width: 300px;
+    margin-right: 20px;
+}
+
+.information-block:last-child {
+    margin-right: 0;
+}
+
+.information-block h3 {
+    color: #666d89;
+}
+
+.information-block p {
+    color: #a8acbf;
+}
+
+
+
+.line-after-about-us{
+    height: 6px;
+    background-color: #fff;
+}
