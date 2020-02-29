@@ -67,37 +67,51 @@ body {
     color: #666d89;
     margin-top: 0;
     padding-top: 65px;
-    padding-bottom: 8px;
+    padding-bottom: 3px;
+    font-family: 'LatoBlack';
+    font-size: 26px;
+    letter-spacing: 2px;
 }
 
 .portfolio p {
     color: #626983;
+    font-family: 'LatoLight';
+    word-spacing: 4px;
+    margin-bottom: 15px;
 }
 
-.portfolio-nav ul{
-    display: flex;
-    padding: 0;
-}
-
-.portfolio-nav li {
-    list-style: none;
-    margin-right: 9px;
+.portfolio-content-width button {
+    margin-right: 4px;
     border: 1px solid #626983;
     border-radius: 5px;
-    padding: 2px 0px;
+    padding-left: 7px;
+    padding-right: 8px;
+    background-color: #2d303a;
+    color: #767e9e;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-family: 'LatoLight';
+    font-size: 12px;
 }
 
-.portfolio-nav a {
-    text-decoration: none;
-    color: #626983;
+.portfolio-content-width button:hover {
+    color: #dedede;
+    border: 1px solid #dedede;
 }
+
 .portfolio-images {
+    padding-bottom: 67px;
+}
+
+.images-block{
     display: flex;
     flex-wrap: wrap;
-    margin: 0 auto;
     max-width: 940px;
-    padding-bottom: 48px;
+    overflow: hidden;
+    max-height: 601px;
+    margin: 0 auto;
 }
+
 .portfolio-image-block {
     margin-bottom: 20px;
     margin-right: 20px;
@@ -172,18 +186,34 @@ body {
     background-color: #323746;
 }
 
+.about-us {
+    background-color: #f2f2f2;
+}
+
 .about-us h2{
     color: #666d89;
-    padding-top: 41px;
+    padding-top: 64px;
+    margin-top: 0;
+    font-family: 'LatoBlack';
+    font-size: 29px;
+    padding-left: 2px;
+    padding-bottom: 17px;
+    margin:0;
 }
 
 .paragraph-after-heading {
     color: #767e9e;
-    padding-bottom: 57px;
+    padding-bottom: 45px;
+    margin: 0;
+    font-family: 'LatoLight';
+    line-height: 29px;
+    font-size: 18px;
+    letter-spacing: -0.02rem;
 }
 
 .about-us-information {
     display: flex;
+    padding-bottom: 59px;
 }
 
 .information-block {
@@ -197,13 +227,88 @@ body {
 
 .information-block h3 {
     color: #666d89;
+    margin: 0;
+    padding-top: 9px;
+    font-family: 'LatoLight';
 }
 
 .information-block p {
     color: #a8acbf;
+    margin: 0;
+    font-size: 12px;
+    font-family: 'LatoLight';
+    padding-top: 9px;
+    line-height: 19px;
+    padding-bottom: 26px;
 }
 
+.social-networks{
+    position: relative;
+}
 
+.social-networks img:hover{
+    cursor: pointer;
+}
+
+.first-block-twitter{
+    position: absolute;
+    top:0px;
+    left: 80px;
+}
+
+.first-block-linkedin{
+    position: absolute;
+    top:0px;
+    left: 119px;
+}
+
+.second-block-facebook{
+    position: absolute;
+    top: -1px;
+    left: -1px;
+}
+
+.second-block-google{
+    position: absolute;
+    top: -1px;
+    left: 39px;
+}
+
+.second-block-twitter{
+    position: absolute;
+    top: -1px;
+    left: 79px;
+}
+
+.second-block-linkedin{
+    position: absolute;
+    top: -1px;
+    left: 119px;
+}
+
+.third-block-facebook{
+    position: absolute;
+    top: -1px;
+    left: -1px;
+}
+
+.third-block-google{
+    position: absolute;
+    top: -1px;
+    left: 39px;
+}
+
+.third-block-twitter{
+    position: absolute;
+    top: -1px;
+    left: 79px;
+}
+
+.third-block-linkedin{
+    position: absolute;
+    top: -1px;
+    left: 119px;
+}
 
 .line-after-about-us{
     height: 6px;
