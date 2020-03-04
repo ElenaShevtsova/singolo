@@ -85,6 +85,7 @@
 
   .form{
     display: flex;
+    padding-bottom: 65px;
   }
 
   .form-block{
@@ -95,7 +96,7 @@
   .form-block input,
   .form-block textarea{
     width: 618px;
-    margin-top: 15px;
+    margin-top: 16px;
   }
 
   .form-block input:first-child{
@@ -103,19 +104,27 @@
   }
 
   .form input{
-    padding: 13px 0 10px 14px;
+    padding: 15px 0 11px 14px;
     border: none;
     border-radius: 5px;
     background-color: #d6564f;
+    font-size: 10px;
+    font-family: 'LatoLight';
+    letter-spacing: 1.1px;
   }
 
+  .form input::placeholder,
+  .form textarea::placeholder{
+      color: #f48c8f;
+  }
+  
   .form textarea{
-    padding: 13px 0 10px 15px;
+    padding: 12px 0 10px 15px;
     border-radius: 5px;
     border: none;
     background-color: #d6564f;
     font-size: 12px;
-    font-family: 'LatoRegular';
+    font-family: 'LatoLight';
     max-width: 618px;
     max-height: 201px;
     min-width: 618px;
@@ -141,4 +150,80 @@
     font-family: 'LatoRegular';
     line-height: 22px;
     color: #f0d8d9;
+    letter-spacing: 0.5px;
+  }
+
+ .display-flex{
+    display: flex;
+ }
+
+  .location-block img{
+    width: 7px;
+    height: 11px;
+    margin-top: 26px;
+    margin-left: 5px;
+  }
+
+  .location-block p{
+    margin: 0;
+    font-size: 12px;
+    font-family: 'LatoRegular';
+    padding-top: 26px;
+    padding-left: 12px;
+    color: #f0d8d9;
+  }
+
+  .phone-block img{
+    width: 10px;
+    height: 11px;
+    margin-top: 7px;
+    margin-left: 2px;
+  }
+
+  .phone-block p{
+    margin: 0;
+    font-size: 12px;
+    padding-top: 6px;
+    padding-left: 11px;
+    color: #f0d8d9;
+    font-family: 'LatoRegular';
+  }
+
+  .email-block img{
+    width: 13px;
+    height: 8px;
+    margin-top: 11px;
+    margin-left: 1px;
+  }
+
+  .email-block p{
+    margin: 0;
+    font-size: 12px;
+    padding-top: 7px;
+    padding-left: 11px;
+    color: #f0d8d9;
+    font-family: 'LatoLight';
+  }
+
+  .line-after-quote{
+    height: 6px;
+    background-color: #ea676b;
+  }
+
+  footer{
+    background-color: #2d303a;
+    padding-top: 21px;
+    padding-bottom: 16px;
+  }
+
+  .footer{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer-copyright{
+    padding-top: 11px;
+    color: #666d89;
+    font-family: 'LatoRegular';
+    font-size: 12px;
   }
