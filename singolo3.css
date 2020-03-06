@@ -85,7 +85,7 @@
 
   .form{
     display: flex;
-    padding-bottom: 65px;
+    padding-bottom: 43px;
   }
 
   .form-block{
@@ -97,10 +97,11 @@
   .form-block textarea{
     width: 618px;
     margin-top: 16px;
+    outline: none;
   }
 
   .form-block input:first-child{
-      margin-top: 0;
+    margin-top: 0;
   }
 
   .form input{
@@ -129,6 +130,20 @@
     max-height: 201px;
     min-width: 618px;
     min-height: 201px;
+  }
+
+  button{
+    border: 0;
+    border-radius: 5px;
+    background-color: #d6564f;
+    color: #f08586;
+    padding: 5px 25px;
+    margin-top: 16px;
+    cursor: pointer;
+  }
+
+  button:hover{
+    opacity: 0.8;
   }
 
   .contact-information {
