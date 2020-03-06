@@ -1,0 +1,444 @@
+*{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+ @font-face {
+	font-family: 'LatoBlack';
+	font-display: swap;
+	src: url('assets/fonts/Lato-Black.eot');
+	src: local('☺'), url('assets/fonts/Lato-Black.woff') format('woff'), url('assets/fonts/Lato-Black.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+} 
+
+
+@font-face {
+    font-family: 'LatoBlack';
+    src: url('assets/fonts/Lato-Black.woff2') format('woff2'),
+         url('assets/fonts/Lato-Black.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+@font-face {
+    font-family: 'LatoBold';
+    src: url('assets/fonts/Lato-Bold.woff2') format('woff2'),
+         url('assets/fonts/Lato-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LatoRegular';
+    src: url('assets/fonts/Lato-Regular.woff2') format('woff2'),
+         url('assets/fonts/Lato-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: 'LatoLight';
+    src: url('assets/fonts/Lato-Light.woff2') format('woff2'),
+         url('assets/fonts/Lato-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+body {
+    margin: 0;
+    padding:0;
+}
+
+.wrapper {
+    max-width: 1020px;
+    width: 100%;
+    margin: 0 auto 0;
+}
+
+header {
+    background-color: #2d303a;
+}
+
+header h1 {
+    margin:0;
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+    padding-top: 10px;
+    font-family: LatoLight;
+    position: relative;
+}
+
+h1 span {
+    color: #e36861;
+    position: absolute;
+    top: 6px;
+    right: -15px;
+}
+
+.pre-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 20px 40px 30px;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: LatoRegular;
+}
+
+header a:hover {
+    color: #f06c64;
+}
+
+header ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: #494e62;
+}
+
+header ul li:first-child {
+    list-style: none;
+}
+
+header ul {
+    margin:0;
+}
+
+header li {
+    margin-left: 29px;
+    padding-top: 20px;
+}
+
+.line {
+    height: 6px;
+    background-color: #323746;
+}
+
+.slider-block {
+    background-color: #f06c64;
+}
+
+.pre-wrapper_slider-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+}
+.left-button,
+.right-button {
+    position: relative;
+}
+
+.left-button img {
+    position: absolute;
+    top: 280px;
+    left: 17px;
+}
+
+.left-button:hover,
+.right-button:hover {
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+.right-button img {
+    position: absolute;
+    top: 279px;
+    right: 17px;
+}
+.slider-block_images {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 81px;
+    position: relative;
+    margin-top: 52px;
+}
+
+.first-img_second-layer {
+    width: 190px;
+    height: 337px;
+    background-image: url('assets/Layer\ 6.png');
+    background-position: -16px -135px;
+    position: absolute;
+    top: 63px;
+    left: 15px;
+    border: 3px solid #c5c5c5;
+    border-radius: 3px;
+}
+.first-img {
+    position: relative;
+    z-index:1;
+    left: 38px;
+    padding-right: 197px;
+}
+.first-img-shadow {
+    width: 218px;
+    height: 461px;
+    border-radius: 30px;
+    position: absolute;
+    top: 21px;
+    left: 60px;
+    opacity: 0.2;
+    background-color: black;
+}
+
+.first-img_speaker {
+    background-color: #acacac;
+    width: 36px;
+    height: 5px;
+    border-radius: 3px;
+    position: absolute;
+    top: 36px;
+    left: 91px;
+}
+
+.first-img_camera {
+    width: 9px;
+    height: 9px;
+    background-color: #eb5055;
+    border: 2px solid #d8d8d8;
+    border-radius: 50%;
+    position: absolute;
+    top: 17px;
+    left: 104px;
+}
+
+.first-img_button {
+    width: 41px;
+    height: 41px;
+    background-color: #fafafa;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 17px;
+    left: 90px;
+}
+.first-img_second-button {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #bfbfbf;
+    border-radius: 3px;
+    position: absolute;
+    bottom: 28px;
+    left: 101px;
+}
+.second-img_second-layer {
+    width: 337px;
+    height: 190px;
+    background-image: url('assets/Layer\ 5.png');
+    background-position: -124px 460px;
+    position: absolute;
+    top: 15px;
+    left: 58px;
+    border: 2px solid #c5c5c5;
+}
+
+.second-img {
+    position: relative;
+    top: 120px;
+    left: -63px;
+    z-index: 1;
+}
+.second-img-shadow {
+    width: 461px;
+    height: 218px;
+    border-radius: 30px;
+    position: absolute;
+    top: 143px;
+    left: 374px;
+    opacity: 0.2;
+    background-color: black;
+}
+.second-img_speaker {
+    background-color: #acacac;
+    width: 5px;
+    height: 36px;
+    border-radius: 3px;
+    position: absolute;
+    top: 91px;
+    right: 39px;
+}
+
+.second-img_camera {
+    width: 9px;
+    height: 9px;
+    background-color: #eb5055;
+    border: 2px solid #d8d8d8;
+    border-radius: 50%;
+    position: absolute;
+    top: 104px;
+    right: 19px;
+}
+
+.second-img_button {
+    width: 41px;
+    height: 41px;
+    background-color: #fafafa;
+    border-radius: 50%;
+    position: absolute;
+    top: 87px;
+    left: 8px;
+}
+
+.second-img_second-button {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #bfbfbf;
+    border-radius: 3px;
+    position: absolute;
+    top: 101px;
+    left: 22px;
+}
+
+.services {
+    background-color: #f2f2f2;
+    padding-bottom: 56px;
+}
+
+.heading {
+    color: #666d89;
+    font-size: 30px;
+    padding-top: 62px;
+    padding-left: 40px;
+    font-family: LatoBlack;
+}
+
+.text-color {
+    color: #767e9e;
+}
+.text-padding {
+    padding-top: 19px;
+    padding-left: 40px;
+    line-height: 1.7;
+    letter-spacing: 1px;
+    font-family: LatoLight;
+}
+.services-collection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding-left: 44px;
+    padding-top: 47px;
+}
+
+.display-collection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 300px;
+    width: 100%;
+    margin-left: 20px;
+}
+
+.circle {
+   padding: 10px;
+   width: 58px;
+   height: 60px;
+   border: 2px solid gray;
+   border-radius: 50%;
+}
+.circle-design {
+    position: relative;
+    top: 2px;
+    left: -3px;
+}
+
+.design {
+    margin-left: 18px;
+}
+
+.circle-ideas {
+    position: relative;
+    top: 2px;
+    left: -4px;
+    padding-left: 17px;
+    padding-right: 11px;
+}
+
+.ideas-block {
+    padding-left: 18px;
+}
+
+.circle-answer {
+    position: relative;
+    top: 4px;
+    left: -4px;
+    padding-left: 9px;
+    padding-right: 11px;
+}
+
+.circle-responsive {
+    position: relative;
+    top: 30px;
+    left: -2px;
+    padding-left: 16px;
+}
+
+.responsive-block {
+    padding-top: 28px;
+    padding-left: 20px;
+}
+
+.answer-block{
+    padding-left: 19px;
+}
+
+.circle-support {
+    position: relative;
+    top: 32px;
+    left: -3px;
+}
+
+.circle-star {
+    position: relative;
+    top: 29px;
+    right: 4px;
+}
+
+.star-block {
+    padding-top: 28px;
+    padding-left: 19px;
+}
+
+.support-block {
+    padding-top: 28px;
+    padding-left: 16px;
+}
+
+.display-collection:first-child,
+.display-collection:nth-child(4n +4){
+    margin-left: 0;
+}
+
+.heading-collection {
+    color: #666d89;
+    margin: 0;
+    font-family: LatoBold;
+    font-size: 18px;
+}
+
+.line-height {
+    font-size: 13px;
+    line-height: 22px;
+    font-family: LatoLight;
+    padding-left: 3px;
+    padding-top: 9px;
+    margin: 0;
+    letter-spacing: -0.02rem;
+}
+.line-afterservices {
+    height: 6px;
+    background-color: #fff;
+}
