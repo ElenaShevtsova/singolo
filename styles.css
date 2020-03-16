@@ -76,6 +76,10 @@ h1 span {
     right: -15px;
 }
 
+.header-active{
+    color: #c9605c;
+}
+
 .pre-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -127,6 +131,15 @@ header li {
     background-color: #f06c64;
 }
 
+.second-slide{
+    position: absolute;
+    display: none;
+}
+
+.first-slide img,
+.second-slide img{
+    width: 876px;
+}
 .pre-wrapper_slider-block {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -163,6 +176,19 @@ header li {
     margin-bottom: 81px;
     position: relative;
     margin-top: 52px;
+}
+
+.position{
+    position:relative; 
+    left: -10000px;
+}
+
+.display-block{
+    display: block;
+}
+
+.second-slide-bg{
+    background-color: #648BF0;
 }
 
 .first-img_second-layer {
@@ -299,7 +325,9 @@ header li {
     top: 101px;
     left: 22px;
 }
-
+.black-bg{
+    background: black;
+}
 .services {
     background-color: #f2f2f2;
     padding-bottom: 56px;
@@ -485,18 +513,23 @@ header li {
     background-color: #2d303a;
     color: #767e9e;
     cursor: pointer;
-    margin-bottom: 20px;
+    margin-bottom: 14px;
     font-family: 'LatoLight';
     font-size: 12px;
+    margin-top: 0;
 }
 
-.portfolio-content-width button:hover {
+.portfolio-buttons button:hover {
+    color: #dedede;
+    border: 1px solid #dedede;
+}
+.portfolio-buttons .portfolio-buttons-active{
     color: #dedede;
     border: 1px solid #dedede;
 }
 
 .portfolio-images {
-    padding-bottom: 67px;
+    padding-bottom: 69px;
 }
 
 .images-block{
@@ -508,6 +541,9 @@ header li {
     margin: 0 auto;
 }
 
+.images-block-border{
+    border: 5px solid #F06C64;
+}
 .portfolio-image-block {
     margin-bottom: 20px;
     margin-right: 20px;
@@ -609,7 +645,7 @@ header li {
 
 .about-us-information {
     display: flex;
-    padding-bottom: 59px;
+    padding-bottom: 60px;
 }
 
 .information-block {
@@ -778,11 +814,10 @@ header li {
   letter-spacing: 1.1px;
 }
 
-.form input::placeholder,
-.form textarea::placeholder{
+.form input::placeholder{
     color: #f48c8f;
 }
-
+/*
 .form textarea{
   padding: 12px 0 10px 15px;
   border-radius: 5px;
@@ -794,6 +829,36 @@ header li {
   max-height: 201px;
   min-width: 618px;
   min-height: 201px;
+}*/
+
+.form .input-describe{
+    padding-bottom: 179px;
+}
+
+.display-none{
+    display: none;
+}
+
+.parent-block{
+    background: #000;
+    height: 100%;
+    opacity: 0.9;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+    left: 0;
+}
+
+.message-information{
+  background-color: #f48c8f;
+  height: 200px;
+  position: fixed;
+  top: 100px;
+  left: 40%;
+  color: #fff;
+  width: 300px;
+  text-align: center;
 }
 
 button{
