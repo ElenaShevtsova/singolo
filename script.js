@@ -23,6 +23,29 @@ headerMenu.addEventListener('click', (event) => {
     event.target.classList.add('header-active');
 });
 
+document.addEventListener('scroll', onScroll);
+
+function onScroll(event){
+    const curPos = window.scrollY;
+    let home = document.getElementById('home');
+    let services = document.getElementById('services');
+    let portfolio = document.getElementById('portfolio');
+    let about = document.getElementById('about');
+    let contact = document.getElementById('contact');
+    let array = [home,services, portfolio, about, contact];
+    array.forEach((el)=>{
+        if(el.offsetTop <= curPos && (el.offsetTop + el.offsetHeight) < curPos) {
+            
+         document.querySelectorAll('#header-menu a').forEach((a)=>{
+            a.classList.remove('header-active');
+            if(el.getAttribute('id') === a.getAttribute('href').substring(1)){
+                a.classList.add('header-active');
+            }
+         })
+        }
+    })
+}
+
 rightBtn.addEventListener('click', () => {
     slider.classList.toggle('position');
     sliderBlock.classList.toggle('slider-block');
