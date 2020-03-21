@@ -13,11 +13,10 @@
     <header>
         <div class="wrapper">
             <div class="pre-wrapper">
-                <a href="#" id="home"></a>
                 <h1>SINGOLO<span>&#65121;</span></h1>
                 <nav>
                     <ul id="header-menu">
-                        <li><a href="#" class="header-active">Home</a></li>
+                        <li><a href="#home" class="header-active">Home</a></li>
                         <li><a href="#services">Services</a></li>
                         <li><a href="#portfolio">Portfolio</a></li>
                         <li><a href="#about">About</a></li>
@@ -31,9 +30,10 @@
     <div class="slider-block">
         <div class="wrapper">
             <div class="pre-wrapper_slider-block">
+                <div href="#" id="home"></div>
                 <div class="left-button" id="left-button"><img src="assets/left.png"></div>
                 <div class="second-slide" id="second-slide"><img src="assets/Slider.png" alt=""></div>
-                <section class="slider-block_images" id="slider">
+                <section class="slider-block_images slide-active" id="slider">
                     <div class="first-img"><img src="assets/iPhone Vertical.png" alt="">
                         <div class="first-img_speaker"></div>
                         <div class="first-img_camera"></div>
@@ -53,9 +53,8 @@
             </div>
         </div>
     </div>
-    <div class="services">
+    <div class="services" id="services">
         <div class="wrapper">
-            <a href="#" id="services"></a>
             <div class="heading">Our Services</div>
             <div class="text-color text-padding">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
                 Duis mollis, non
@@ -114,9 +113,8 @@
         </div>
     </div>
     <div class="line-afterservices"></div>
-    <div class="portfolio">
+    <div class="portfolio" id="portfolio">
         <div class="wrapper-part2">
-            <a href="#" id="portfolio"></a>
             <div class="portfolio-content-width">
                 <h2>Portfolio</h2>
                 <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
@@ -146,9 +144,8 @@
         </div>
     </div>
     <div class="line-after-portfolio"></div>
-    <div class="about-us">
+    <div class="about-us" id="about">
         <div class="wrapper-part2">
-                <a href="#" id="about"></a>
             <div class="portfolio-content-width">
                 <h2>About Us</h2>
                 <p class="paragraph-after-heading">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
@@ -197,8 +194,7 @@
         </div>
     </div>
     <div class="line-after-about-us"></div>
-    <div class="quote-block">
-        <a href="#" id="contact"></a>
+    <div class="quote-block" id="contact">
         <div class="wrapper-part3">
             <div class="paragraph-before-form">
                 <h2>Get a Quote</h2>
@@ -211,11 +207,9 @@
             <div class="form">
                 <div class="form-block">
                     <form action="" onsubmit='return false;'>
-                        <input type="text" placeholder="Name (Required)" required pattern="^[a-zA-Z]+$">
-                        <input type="email" placeholder="Email (Required)" required>
+                        <input type="text" placeholder="Name (Required)" required pattern="^[a-zA-Z]+$" id="name-input">
+                        <input type="email" placeholder="Email (Required)" required id="email-input">
                         <input type="text" placeholder="Subject" id="input-subject">
-                        <!--<textarea name="" id="" cols="30" rows="12"
-                            placeholder="Describe your project in detail..." id="input-describe"></textarea> -->
                         <input type="text" placeholder="Describe your project in detail..." class="input-describe"
                             id="input-describe">
                         <button type="submit" id="submit-button">Submit</button>

@@ -15,7 +15,10 @@ let headerMenu = document.getElementById('header-menu'),
     sliderBlock = document.getElementsByClassName('slider-block')[0],
     subject = document.getElementsByClassName('subject')[0],
     messageInformation = document.getElementsByClassName('message-information')[0],
-    parentBlock = document.getElementById('parent-block');
+    parentBlock = document.getElementById('parent-block'),
+    sliderArr = [slider, secondSlide],
+    currentSlide = 0,
+    isEnabled = true;
 
 
 headerMenu.addEventListener('click', (event) => {
@@ -34,7 +37,7 @@ function onScroll(event){
     let contact = document.getElementById('contact');
     let array = [home,services, portfolio, about, contact];
     array.forEach((el)=>{
-        if(el.offsetTop <= curPos && (el.offsetTop + el.offsetHeight) < curPos) {
+        if(el.offsetTop <= curPos && (el.offsetTop + el.offsetHeight) > curPos) {
             
          document.querySelectorAll('#header-menu a').forEach((a)=>{
             a.classList.remove('header-active');
@@ -84,6 +87,7 @@ secondImgSecondBtn.addEventListener('click', () => {
     changeSecondBg()
 });
 
+
 portfolioButtons.addEventListener('click', (event) => {
     portfolioButtons.querySelectorAll('button').forEach(el => el.classList.remove('portfolio-buttons-active'));
     event.target.classList.add('portfolio-buttons-active');
@@ -110,6 +114,7 @@ function sortPortfolioImages() {
 submitBtn.addEventListener('click', () => {
     let inputSubject = document.getElementById('input-subject').value;
     let inputDescribe = document.getElementById('input-describe').value;
+    let agreeBtn = document.getElementsByClassName('agree-button')[0];
     document.getElementsByClassName('send-letter')[0].innerHTML = 'Письмо отправлено';
     if (inputSubject === '' && inputDescribe === '') {
         subject.innerHTML = `Без темы`;
@@ -126,6 +131,12 @@ submitBtn.addEventListener('click', () => {
     }
     parentBlock.classList.toggle('parent-block');
     messageInformation.classList.toggle('display-none');
+    agreeBtn.addEventListener('click', function(){
+        document.getElementById('name-input').value = ' ';
+        document.getElementById('email-input').value = ' ';
+        document.getElementById('input-describe').value = ' ';
+        document.getElementById('input-subject').value = ' ';
+    })
 
 })
 

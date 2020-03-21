@@ -60,7 +60,8 @@ html{
 
 header {
     background-color: #2d303a;
-    position: fixed;
+    position: sticky;
+    top:0;
     z-index: 10;
     width: 100%;
 }
@@ -136,25 +137,39 @@ header li {
 
 .slider-block {
     background-color: #f06c64;
-    padding-top: 95px;
 }
 
 .second-slide{
     position: absolute;
     display: none;
+    overflow: hidden;
+    animation: 0.5s ease-in-out;
 }
 
 .first-slide img,
 .second-slide img{
-    width: 876px;
+    width: 810px;
 }
 .pre-wrapper_slider-block {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
+    animation: 0.5s ease-in-out;
 }
+
+.slider-active,
+.next{
+    display: block;
+}
+
+.next {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
 .left-button,
 .right-button {
     position: relative;
@@ -184,6 +199,43 @@ header li {
     margin-bottom: 81px;
     position: relative;
     margin-top: 52px;
+    
+}
+
+.to-left {
+    animation-name: left;
+}
+
+.to-right {
+    animation-name: right;
+    animation-direction: reverse;
+}
+
+.from-left {
+    animation-name: left;
+    animation-direction: reverse;
+}
+
+.from-right {
+    animation-name: right;
+}
+
+@keyframes left {
+    from {
+        left: 0;
+    }
+    to {
+        left: -100%;
+    }
+}
+
+@keyframes right {
+    from {
+        left: 100%;
+    }
+    to {
+        left: 0;
+    }
 }
 
 .position{
@@ -361,6 +413,7 @@ header li {
 .services {
     background-color: #f2f2f2;
     padding-bottom: 58px;
+    scroll-margin-top: 90px;
 }
 
 .heading {
@@ -510,6 +563,7 @@ header li {
 }
 .portfolio {
     background-color: #2d303a;
+    scroll-margin-top: 90px;
 }
 
 .portfolio-content-width {
@@ -575,11 +629,21 @@ header li {
     border: 5px solid #F06C64;
 }
 .portfolio-image-block {
-    margin-bottom: 20px;
+  /*  margin-bottom: 20px;
     margin-right: 20px;
     width: 220px;
-    height: 187px;
+    height: 187px;*/
+    margin: 10px;
+    width: 100%;
+    height: 100%;
+    flex: 1 0 20%;
 }
+
+.portfolio-image-block::before{
+    content: "";
+    float: left;
+    padding-top: 100%;
+} 
  .portfolio-image-block:nth-child(4n + 4) {
      margin-right: 0;
  }
@@ -650,6 +714,7 @@ header li {
 
 .about-us {
     background-color: #f2f2f2;
+    scroll-margin-top: 90px;
 }
 
 .about-us h2{
@@ -791,6 +856,7 @@ header li {
 
 .quote-block{
     background-color: #f06c64;
+    scroll-margin-top: 90px;
 }
 
 .paragraph-before-form,
@@ -1018,6 +1084,7 @@ footer{
 
 
 @media (max-width: 940px){
+    /*
     .images-block{
         max-height: 827px;
         justify-content: center;
@@ -1029,7 +1096,7 @@ footer{
 
     .portfolio-image-block:nth-child(3n + 3) {
         margin: 0;
-    }
+    }*/
     
 }
 
@@ -1087,22 +1154,30 @@ footer{
         max-width: 300px;
     }
     
+    .portfolio-image-block {
+        flex: 1 0 25%;
+    }
 }
 
 
 @media (max-width: 375px){
 
-
+/*
     .images-block{
         display: grid;
         grid-template-columns: 1fr 1fr;
-    }
+    } */
 
     .about-us-information{
         flex-wrap: wrap;
     }
-
+/*
     .portfolio-image-block:nth-child(even){
         margin-right: 5px;
+    }*/
+
+    .portfolio-image-block {
+        flex: 1 0 35%;
+        margin: 5px;
     }
 }
