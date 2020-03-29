@@ -28,23 +28,23 @@ headerMenu.addEventListener('click', (event) => {
 
 document.addEventListener('scroll', onScroll);
 
-function onScroll(event){
+function onScroll(event) {
     const curPos = window.scrollY;
     let home = document.getElementById('home');
     let services = document.getElementById('services');
     let portfolio = document.getElementById('portfolio');
     let about = document.getElementById('about');
     let contact = document.getElementById('contact');
-    let array = [home,services, portfolio, about, contact];
-    array.forEach((el)=>{
-        if(el.offsetTop <= curPos && (el.offsetTop + el.offsetHeight) > curPos) {
-            
-         document.querySelectorAll('#header-menu a').forEach((a)=>{
-            a.classList.remove('header-active');
-            if(el.getAttribute('id') === a.getAttribute('href').substring(1)){
-                a.classList.add('header-active');
-            }
-         })
+    let array = [home, services, portfolio, about, contact];
+    array.forEach((el) => {
+        if (el.offsetTop <= curPos && (el.offsetTop + el.offsetHeight) > curPos) {
+
+            document.querySelectorAll('#header-menu a').forEach((a) => {
+                a.classList.remove('header-active');
+                if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {
+                    a.classList.add('header-active');
+                }
+            })
         }
     })
 }
@@ -122,7 +122,7 @@ submitBtn.addEventListener('click', () => {
     } else if (inputDescribe === '' && inputSubject !== '') {
         document.getElementsByClassName('describe')[0].innerHTML = `Без описания`;
         subject.innerHTML = `Тема: ${inputSubject}`;
-    } else if(inputDescribe !== '' && inputSubject === ''){
+    } else if (inputDescribe !== '' && inputSubject === '') {
         subject.innerHTML = `Без темы`;
         document.getElementsByClassName('describe')[0].innerHTML = `Описание: ${inputDescribe}`;
     } else {
@@ -131,7 +131,7 @@ submitBtn.addEventListener('click', () => {
     }
     parentBlock.classList.toggle('parent-block');
     messageInformation.classList.toggle('display-none');
-    agreeBtn.addEventListener('click', function(){
+    agreeBtn.addEventListener('click', function () {
         document.getElementById('name-input').value = ' ';
         document.getElementById('email-input').value = ' ';
         document.getElementById('input-describe').value = ' ';
@@ -143,3 +143,25 @@ submitBtn.addEventListener('click', () => {
 document.getElementsByClassName('agree-button')[0].addEventListener('click', () => {
     parentBlock.classList.toggle('display-none');
 })
+
+document.getElementsByClassName('menu-btn')[0].addEventListener('click', () => {
+    document.getElementById('pre-menu-wrapper').classList.remove('display-none');
+    document.getElementsByClassName('menu-btn-line')[0].classList.toggle('menu-btn-rotate');
+    document.getElementById('pre-menu-wrapper').classList.toggle('pre-header-menu');
+    document.getElementsByTagName('header')[0].getElementsByTagName('nav')[0].classList.toggle('menu-visibility-mobile');
+    document.getElementById('header-menu').classList.toggle('menu-direction');
+    document.getElementById('pre-menu-wrapper').classList.toggle('menu-direction-mobile');
+    document.getElementById('pre-menu-wrapper').getElementsByTagName('h1')[0].getElementsByTagName('span')[0].classList.toggle('display-none');
+    document.getElementsByTagName('h1')[0].classList.toggle('h1-padding');
+})
+
+
+let x = document.getElementById('pre-menu-wrapper').getElementsByTagName('a');
+for (let i = 0; i < x.length; i++) {
+    x[i].addEventListener('click', () => {
+        document.getElementById('pre-menu-wrapper').classList.toggle('display-none');
+    })
+}
+
+
+
