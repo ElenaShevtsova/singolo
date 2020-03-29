@@ -19,7 +19,7 @@ let headerMenu = document.getElementById('header-menu'),
     sliderArr = [slider, secondSlide],
     currentSlide = 0,
     isEnabled = true;
-
+    
 
 headerMenu.addEventListener('click', (event) => {
     headerMenu.querySelectorAll('a').forEach(el => el.classList.remove('header-active'));
