@@ -19,7 +19,7 @@ let headerMenu = document.getElementById('header-menu'),
     sliderArr = [slider, secondSlide],
     currentSlide = 0,
     isEnabled = true;
-    
+
 
 headerMenu.addEventListener('click', (event) => {
     headerMenu.querySelectorAll('a').forEach(el => el.classList.remove('header-active'));
@@ -155,13 +155,6 @@ document.getElementsByClassName('menu-btn')[0].addEventListener('click', () => {
     document.getElementsByTagName('h1')[0].classList.toggle('h1-padding');
 })
 
-
-let x = document.getElementById('pre-menu-wrapper').getElementsByTagName('a');
-for (let i = 0; i < x.length; i++) {
-    x[i].addEventListener('click', () => {
-        document.getElementById('pre-menu-wrapper').classList.toggle('display-none');
-    })
-}
 
 
 

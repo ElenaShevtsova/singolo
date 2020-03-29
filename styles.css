@@ -1282,7 +1282,6 @@ footer{
         height: 223px;
     }
 
-
     .first-img_second-layer,
     .second-img_second-layer {
         background-size: cover;
@@ -1536,25 +1535,14 @@ footer{
 
 }
 
-@media (max-width: 495px){
-
-}
-
 @media (max-width: 375px){
-
-/*
-    .images-block{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    } */
+    body {
+        overflow-x: hidden;
+    }
 
     .about-us-information{
         flex-wrap: wrap;
     }
-/*
-    .portfolio-image-block:nth-child(even){
-        margin-right: 5px;
-    }*/
 
     .portfolio-image-block {
         flex: 1 0 35%;
@@ -1624,8 +1612,13 @@ footer{
         max-height: 629px;
     }
 
+    .information-block-img {
+        max-width: 235px;
+    }
+
     .information-block p {
         padding-bottom: 8px;
+        width: 216px;
     }
 
     .text-padding {
